@@ -12,12 +12,22 @@
     <title>Calendario</title>
   </head>
   <body>
-    <ul id="calendar">
+    <header>
+    <div id="prev" class="hidden">Prev</div>
+    <h1></h1>
+    <div id="next">Next</div>
+  </header>
 
-    </ul>
-    <script id="entry-template" type="text/x-handlebars-template">
-      <li>{{date}}</li>
-    </script>
+  <ul class="days">
+
+  </ul>
+
+  <script id="entry-template" type="text/x-handlebars-template">
+      <li class="day" data-date-complete="{{dateComplete}}">
+        <span class="data">{{day}} {{month}}</span> <span class="nome-festivita"></span>
+        <span class="date-complete">{{dateComplete}}</span>
+      </li>
+  </script>
     <script src="js/script.js" charset="utf-8"></script>
   </body>
   </html>
